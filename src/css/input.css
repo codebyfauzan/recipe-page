@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@layer base {
+    /* Outfit - Regular */
+    @font-face {
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('/public/assets/fonts/outfit/static/Outfit-Regular.ttf') format('truetype');
+    }
+    /* Outfit - SemiBold */
+    @font-face {
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url('/public/assets/fonts/outfit/static/Outfit-SemiBold.ttf') format('truetype');
+    }
+    /* Outfit - Bold */
+    @font-face {
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url('/public/assets/fonts/outfit/static/Outfit-Bold.ttf') format('truetype');
+    }
+    /* Young Serif - Regular */
+    @font-face {
+        font-family: 'Young Serif';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('/public/assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+    }
+}
