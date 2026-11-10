@@ -7,11 +7,9 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-900: oklch(39.6% 0.141 25.723);
-    --color-blue-900: oklch(37.9% 0.146 265.522);
-    --color-rose-50: oklch(96.9% 0.015 12.422);
-    --color-rose-800: oklch(45.5% 0.188 13.697);
-    --color-stone-900: oklch(21.6% 0.006 56.043);
+    --color-rose-50: hsl(330, 100%, 98%);
+    --color-rose-800: hsl(332, 51%, 32%);
+    --color-stone-900: hsl(24, 5%, 18%);
     --spacing: 0.25rem;
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
@@ -21,6 +19,8 @@
     --radius-lg: 0.5rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-outfit: "Outfit", sans-serif;
+    --font-youngSerif: "Young Serif", serif;
   }
 }
 @layer base {
@@ -211,12 +211,6 @@
   .table {
     display: table;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
-  }
   .list-inside {
     list-style-position: inside;
   }
@@ -225,10 +219,6 @@
   }
   .rounded-lg {
     border-radius: var(--radius-lg);
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
   }
   .bg-rose-50 {
     background-color: var(--color-rose-50);
@@ -242,6 +232,12 @@
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
+  .font-outfit {
+    font-family: var(--font-outfit);
+  }
+  .font-youngSerif {
+    font-family: var(--font-youngSerif);
+  }
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
@@ -254,20 +250,11 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
-  .text-blue-900 {
-    color: var(--color-blue-900);
-  }
-  .text-red-900 {
-    color: var(--color-red-900);
-  }
   .text-rose-800 {
     color: var(--color-rose-800);
   }
   .text-stone-900 {
     color: var(--color-stone-900);
-  }
-  .underline {
-    text-decoration-line: underline;
   }
   .outline {
     outline-style: var(--tw-outline-style);
@@ -280,34 +267,29 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('/public/assets/fonts/outfit/static/Outfit-Regular.ttf') format('truetype');
+    src: url('../assets/fonts/outfit/static/Outfit-Regular.ttf') format('truetype');
   }
   @font-face {
     font-family: 'Outfit';
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src: url('/public/assets/fonts/outfit/static/Outfit-SemiBold.ttf') format('truetype');
+    src: url('../assets/fonts/outfit/static/Outfit-SemiBold.ttf') format('truetype');
   }
   @font-face {
     font-family: 'Outfit';
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url('/public/assets/fonts/outfit/static/Outfit-Bold.ttf') format('truetype');
+    src: url('../assets/fonts/outfit/static/Outfit-Bold.ttf') format('truetype');
   }
   @font-face {
     font-family: 'Young Serif';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('/public/assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+    src: url('../assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
   }
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-font-weight {
   syntax: "*";
@@ -321,7 +303,6 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-outline-style: solid;
     }
